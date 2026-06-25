@@ -1,0 +1,134 @@
+---
+import { works } from "../data/works";
+import "../styles/global.css";
+
+const statusLabels = {
+  reserved: "Reserved",
+  "not-available": "Not available",
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A ceramic portfolio presenting handmade works, clay bodies, glazes, firings, and dimensions."
+    />
+    <title>KANG Ceramics</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true">
+          <img src="/images/hero-ceramics.png" alt="" />
+        </div>
+        <div class="hero-copy">
+          <p class="brand">KANG Ceramics</p>
+          <h1 id="hero-title">Ceramic works shaped by earth, glaze, and fire.</h1>
+        </div>
+      </section>
+
+      <section class="works-section" aria-label="Ceramic works">
+        <div class="works-list">
+          {works.map((work) => {
+            const images = work.images ?? (work.image ? [work.image] : []);
+            const coverIndex =
+              typeof work.coverImageIndex === "number"
+                ? Math.min(Math.max(work.coverImageIndex, 0), Math.max(images.length - 1, 0))
+                : 0;
+            const coverImage = images[coverIndex];
+            const secondaryImages = images.filter((_, index) => index !== coverIndex);
+
+            return (
+              <article class="work-card">
+                <div class="work-media" data-count={images.length || 0}>
+                  <figure class={`work-cover ${coverImage ? "" : `placeholder tone-${work.tone}`}`}>
+                    {coverImage && (
+                      <img src={coverImage} alt={`${work.title}, main view`} loading="lazy" />
+                    )}
+                  </figure>
+
+                  {secondaryImages.length > 0 && (
+                    <div class="work-secondary">
+                      {secondaryImages.map((image, index) => (
+                        <figure class="work-detail">
+                          <img
+                            src={image}
+                            alt={`${work.title}, detail ${index + 1}`}
+                            loading="lazy"
+                          />
+                        </figure>
+                      ))}
+                    </div>
+                  )}
+
+                  {images.length === 0 && (
+                    <div class="work-secondary placeholder-row" aria-hidden="true">
+                      <figure class={`work-detail placeholder tone-${work.tone}`} />
+                      <figure class={`work-detail placeholder tone-${work.tone}`} />
+                    </div>
+                  )}
+                </div>
+
+                <div class="work-info">
+                  <div class="work-title-row">
+                    <div>
+                      <div class="work-kicker">
+                        <p class="work-index">{work.id.toString().padStart(2, "0")}</p>
+                        {work.status && (
+                          <span
+                            class={`work-status work-status-${work.status}`}
+                            title={statusLabels[work.status]}
+                            aria-label={statusLabels[work.status]}
+                          />
+                        )}
+                      </div>
+                      <h3>
+                        {work.title}
+                        {work.titleCn && <span class="work-title-cn">{work.titleCn}</span>}
+                      </h3>
+                    </div>
+                    <span class="work-year">{work.year}</span>
+                  </div>
+                  <dl>
+                    {work.clay && (
+                      <div>
+                        <dt>Clay</dt>
+                        <dd>{work.clay}</dd>
+                      </div>
+                    )}
+                    {work.glaze && (
+                      <div>
+                        <dt>Glaze</dt>
+                        <dd>{work.glaze}</dd>
+                      </div>
+                    )}
+                    {work.firing && (
+                      <div>
+                        <dt>Firing</dt>
+                        <dd>{work.firing}</dd>
+                      </div>
+                    )}
+                    <div>
+                      <dt>Dimensions</dt>
+                      <dd>{work.dimensions}</dd>
+                    </div>
+                  </dl>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="footer-mark">KANG Ceramics</p>
+      <p>Portfolio / 2026</p>
+    </footer>
+  </body>
+</html>
