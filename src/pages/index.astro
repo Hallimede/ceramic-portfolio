@@ -5,6 +5,7 @@ import "../styles/global.css";
 const statusLabels = {
   reserved: "Reserved",
   "not-available": "Not available",
+  "not-finished": "Not finished",
 };
 ---
 
@@ -125,6 +126,21 @@ const statusLabels = {
         </div>
       </section>
     </main>
+
+    <aside class="status-legend" aria-label="Work status legend">
+      <div>
+        <span class="work-status work-status-reserved" aria-hidden="true" />
+        <span>Reserved</span>
+      </div>
+      <div>
+        <span class="work-status work-status-not-available" aria-hidden="true" />
+        <span>Not available</span>
+      </div>
+      <div>
+        <span class="work-status work-status-not-finished" aria-hidden="true" />
+        <span>Not finished</span>
+      </div>
+    </aside>
 
     <footer class="site-footer">
       <p class="footer-mark">KANG Ceramics</p>

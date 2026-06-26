@@ -118,7 +118,7 @@ h1 {
   position: relative;
   overflow: hidden;
   aspect-ratio: 4 / 3;
-  background: #ded8cc;
+  background: #d8e3e0;
   animation: slow-float 9s ease-in-out infinite;
 }
 
@@ -145,7 +145,7 @@ h1 {
   flex: 0 0 auto;
   height: clamp(180px, 18vw, 260px);
   overflow: hidden;
-  background: #ded8cc;
+  background: #d8e3e0;
   scroll-snap-align: start;
 }
 
@@ -227,18 +227,24 @@ h1 {
 .work-status {
   position: relative;
   display: inline-block;
-  width: 9px;
-  height: 9px;
+  width: 11px;
+  height: 11px;
   flex: 0 0 auto;
-  border-radius: 999px;
+  color: var(--ink);
+  opacity: 0.78;
 }
 
 .work-status-reserved {
-  background: var(--ink);
+  width: 9px;
+  height: 9px;
+  border: 1px solid currentColor;
+  border-radius: 1px;
+  transform: rotate(45deg);
 }
 
 .work-status-not-available {
-  border: 1px solid var(--ink);
+  border: 1px solid currentColor;
+  border-radius: 999px;
 }
 
 .work-status-not-available::after {
@@ -248,8 +254,13 @@ h1 {
   width: 12px;
   height: 1px;
   content: "";
-  background: var(--ink);
+  background: currentColor;
   transform: translate(-50%, -50%) rotate(-38deg);
+}
+
+.work-status-not-finished {
+  border: 1px dashed currentColor;
+  border-radius: 999px;
 }
 
 .work-year {
@@ -306,53 +317,71 @@ dd {
 }
 
 .tone-warm {
-  background: linear-gradient(145deg, #d1b08a, #8a6048);
+  background: linear-gradient(145deg, #d7e1dc, #8ca5a1);
 }
 
 .tone-warm::before {
   background:
-    radial-gradient(circle at 48% 8%, #ddb887 0 8%, transparent 9%),
-    linear-gradient(145deg, #bc7d52, #6d4635);
+    radial-gradient(circle at 48% 8%, #e7efeb 0 8%, transparent 9%),
+    linear-gradient(145deg, #b7cbc5, #6f8b87);
 }
 
 .tone-ash {
-  background: linear-gradient(145deg, #d8d2c4, #8b897f);
+  background: linear-gradient(145deg, #dfe7e5, #8f9e9d);
 }
 
 .tone-ash::before {
   background:
-    radial-gradient(circle at 50% 8%, #e8e0ce 0 8%, transparent 9%),
-    linear-gradient(145deg, #c7c0ab, #77776d);
+    radial-gradient(circle at 50% 8%, #eef4f1 0 8%, transparent 9%),
+    linear-gradient(145deg, #c6d2cf, #7b8d8c);
 }
 
 .tone-dark {
-  background: linear-gradient(145deg, #625d58, #181715);
+  background: linear-gradient(145deg, #566664, #171f20);
 }
 
 .tone-dark::before {
   background:
-    radial-gradient(circle at 50% 8%, #77706a 0 8%, transparent 9%),
-    linear-gradient(145deg, #4a4641, #11100f);
+    radial-gradient(circle at 50% 8%, #71817e 0 8%, transparent 9%),
+    linear-gradient(145deg, #42514f, #101719);
 }
 
 .tone-celadon {
-  background: linear-gradient(145deg, #c5d2c4, #769486);
+  background: linear-gradient(145deg, #cfe0dc, #789d98);
 }
 
 .tone-celadon::before {
   background:
-    radial-gradient(circle at 50% 8%, #d9e0d5 0 8%, transparent 9%),
-    linear-gradient(145deg, #a9c2b2, #638879);
+    radial-gradient(circle at 50% 8%, #e5efec 0 8%, transparent 9%),
+    linear-gradient(145deg, #a7c6c0, #5f8d87);
 }
 
 .tone-white {
-  background: linear-gradient(145deg, #eee9df, #c7bfb2);
+  background: linear-gradient(145deg, #edf3f1, #c5d2d0);
 }
 
 .tone-white::before {
   background:
-    radial-gradient(circle at 50% 8%, #fffaf2 0 8%, transparent 9%),
-    linear-gradient(145deg, #eee8da, #b8afa1);
+    radial-gradient(circle at 50% 8%, #f8fbfa 0 8%, transparent 9%),
+    linear-gradient(145deg, #e2ebe8, #aebfbd);
+}
+
+.status-legend {
+  display: flex;
+  justify-content: center;
+  gap: clamp(18px, 3vw, 42px);
+  padding: 0 clamp(16px, 2.4vw, 34px) 34px;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.status-legend div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .site-footer {
@@ -477,6 +506,13 @@ dd {
   dl div {
     grid-template-columns: 1fr;
     gap: 4px;
+  }
+
+  .status-legend {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px 22px;
+    padding-bottom: 28px;
   }
 
   .site-footer {
