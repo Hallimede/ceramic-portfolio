@@ -92,7 +92,9 @@ h1 {
 }
 
 .works-section {
-  padding: clamp(92px, 12vw, 170px) clamp(16px, 2.4vw, 34px);
+  --legend-gap: clamp(46px, 5.5vw, 76px);
+  padding: var(--legend-gap) clamp(16px, 2.4vw, 34px)
+    clamp(92px, 12vw, 170px);
 }
 
 .works-list {
@@ -368,13 +370,16 @@ dd {
 
 .status-legend {
   display: flex;
+  align-items: center;
   justify-content: center;
   gap: clamp(18px, 3vw, 42px);
-  padding: 0 clamp(16px, 2.4vw, 34px) 34px;
+  margin-bottom: var(--legend-gap);
+  padding-inline: clamp(16px, 2.4vw, 34px);
   color: var(--muted);
   font-size: 0.68rem;
   font-weight: 500;
   letter-spacing: 0.14em;
+  line-height: 1;
   text-transform: uppercase;
 }
 
@@ -382,6 +387,7 @@ dd {
   display: flex;
   align-items: center;
   gap: 10px;
+  line-height: 1;
 }
 
 .site-footer {
@@ -512,7 +518,6 @@ dd {
     justify-content: center;
     flex-wrap: wrap;
     gap: 16px 22px;
-    padding-bottom: 28px;
   }
 
   .site-footer {

@@ -44,6 +44,7 @@ export const works: CeramicWork[] = [
     dimensions: "5 x 5 x 4",
     status: "reserved",
     tone: "white",
+    glaze: "Spanish Shino",
     images: [
       "/images/2-cup-01.jpg",
       "/images/2-cup-02.jpg",
@@ -62,11 +63,14 @@ export const works: CeramicWork[] = [
     firing: "Cone 10",
     dimensions: "5 x 5 x 3",
     tone: "white",
+    status: "not-available",
+    glaze: "Clear",
     images: [
       "/images/3-cup-01.jpg",
       "/images/3-cup-02.jpg",
       "/images/3-cup-03.jpg",
       "/images/3-cup-04.jpg",
+      "/images/3-cup-05.jpg",
     ],
   },
   {
@@ -80,9 +84,11 @@ export const works: CeramicWork[] = [
     tone: "white",
     images: [
       "/images/4-bowl-01.jpg",
+      "/images/4-bowl-05.jpg",
       "/images/4-bowl-02.jpg",
       "/images/4-bowl-03.jpg",
       "/images/4-bowl-04.jpg",
+
     ],
   },
   {
@@ -95,6 +101,7 @@ export const works: CeramicWork[] = [
     dimensions: "4 x 4 x 3",
     status: "reserved",
     tone: "celadon",
+    coverImageIndex: 2,
     images: [
       "/images/5-cup-01.jpg",
       "/images/5-cup-02.jpg",
@@ -115,13 +122,13 @@ export const works: CeramicWork[] = [
     tone: "warm",
     coverImageIndex: 7,
     images: [
+      "/images/6-cup-07.jpg",
       "/images/6-cup-01.jpg",
       "/images/6-cup-02.jpg",
-      "/images/6-cup-03.jpg",
       "/images/6-cup-04.jpg",
       "/images/6-cup-05.jpg",
       "/images/6-cup-06.jpg",
-      "/images/6-cup-07.jpg",
+      "/images/6-cup-03.jpg",
       "/images/6-cup-08.jpg",
       "/images/6-cup-09.jpg",
     ],
@@ -141,6 +148,7 @@ export const works: CeramicWork[] = [
       "/images/7-bowl-03.jpg",
       "/images/7-bowl-04.jpg",
       "/images/7-bowl-05.jpg",
+      "/images/7-bowl-06.jpg",
     ],
   },
   {
@@ -174,9 +182,9 @@ export const works: CeramicWork[] = [
       "/images/9-cup-01.jpg",
       "/images/9-cup-02.jpg",
       "/images/9-cup-03.jpg",
-      "/images/9-cup-04.jpg",
       "/images/9-cup-05.jpg",
       "/images/9-cup-06.jpg",
+      "/images/9-cup-04.jpg",
     ],
   },
   {
@@ -228,9 +236,9 @@ export const works: CeramicWork[] = [
       "/images/12-pot-01.jpg",
       "/images/12-pot-02.jpg",
       "/images/12-pot-03.jpg",
+      "/images/12-pot-06.jpg",
       "/images/12-pot-04.jpg",
       "/images/12-pot-05.jpg",
-      "/images/12-pot-06.jpg",
       "/images/12-pot-07.jpg",
     ],
   },
@@ -262,6 +270,7 @@ export const works: CeramicWork[] = [
     firing: "Cone 10",
     dimensions: "3 x 3 x 3",
     status: "reserved",
+    glaze: "Spanish Shino",
     tone: "warm",
     images: [
       "/images/14-cup-01.jpg",
@@ -306,17 +315,13 @@ export const works: CeramicWork[] = [
     tone: "celadon",
     images: [
       "/images/16-cup-01.jpg",
-      "/images/16-cup-02.jpg",
-      "/images/16-cup-09.jpg",
-      "/images/16-cup-04.jpg",
-      "/images/16-cup-03.jpg",
-
-      "/images/16-cup-05.jpg",
-      "/images/16-cup-08.jpg",
       "/images/16-cup-06.jpg",
+      "/images/16-cup-08.jpg",
+      "/images/16-cup-04.jpg",
+      "/images/16-cup-02.jpg",
+      "/images/16-cup-05.jpg",
+      "/images/16-cup-09.jpg",
       "/images/16-cup-07.jpg",
-
-
     ],
   },
   {
@@ -334,6 +339,7 @@ export const works: CeramicWork[] = [
       "/images/17-bowl-03.jpg",
       "/images/17-bowl-04.jpg",
       "/images/17-bowl-05.jpg",
+      "/images/17-bowl-06.jpg",
     ],
   },
   {
@@ -367,12 +373,12 @@ export const works: CeramicWork[] = [
     images: [
       "/images/19-bowl-01.jpg",
       "/images/19-bowl-02.jpg",
-      "/images/19-bowl-03.jpg",
       "/images/19-bowl-04.jpg",
       "/images/19-bowl-05.jpg",
       "/images/19-bowl-06.jpg",
       "/images/19-bowl-07.jpg",
       "/images/19-bowl-08.jpg",
+      "/images/19-bowl-03.jpg",
     ],
   },
   {
@@ -403,6 +409,7 @@ export const works: CeramicWork[] = [
     firing: "Cone 10",
     dimensions: "3 x 3 x 3",
     tone: "ash",
+    glaze: "Clear",
     images: [
       "/images/21-cup-01.jpg",
       "/images/21-cup-02.jpg",
@@ -423,14 +430,13 @@ export const works: CeramicWork[] = [
     tone: "white",
     images: [
       "/images/22-coffee-01.jpg",
-      "/images/22-coffee-02.jpg",
       "/images/22-coffee-03.jpg",
+      "/images/22-coffee-06.jpg",
       "/images/22-coffee-04.jpg",
       "/images/22-coffee-05.jpg",
-      "/images/22-coffee-06.jpg",
       "/images/22-coffee-07.jpg",
-      "/images/22-coffee-08.jpg",
       "/images/22-coffee-09.jpg",
+      "/images/22-coffee-02.jpg",
     ],
   },
   {
@@ -483,10 +489,10 @@ export const works: CeramicWork[] = [
     firing: "Cone 10",
     dimensions: "4 x 4 x 3",
     tone: "dark",
+    status: "reserved",
     images: [
       "/images/25-cup-01.jpg",
       "/images/25-cup-02.jpg",
-      "/images/25-cup-03.jpg",
       "/images/25-cup-04.jpg",
       "/images/25-cup-05.jpg",
       "/images/25-cup-06.jpg",
@@ -511,7 +517,6 @@ export const works: CeramicWork[] = [
       "/images/26-cup-05.jpg",
       "/images/26-cup-06.jpg",
       "/images/26-cup-07.jpg",
-      "/images/26-cup-08.jpg",
       "/images/26-cup-09.jpg",
     ],
   },
@@ -548,8 +553,8 @@ export const works: CeramicWork[] = [
     images: [
       "/images/28-cup-18.jpg",
       "/images/28-cup-19.jpg",
-      "/images/28-cup-20.jpg",
       "/images/28-cup-21.jpg",
+      "/images/28-cup-20.jpg",
       "/images/28-cup-22.jpg",
       "/images/28-cup-23.jpg",
       "/images/28-cup-24.jpg",
@@ -562,13 +567,13 @@ export const works: CeramicWork[] = [
     year: "2026",
     clay: "Soldate 60",
     firing: "Cone 10",
+    glaze: "Clear",
     dimensions: "5 x 5 x 3",
     tone: "celadon",
     images: [
       "/images/29-cup-01.jpg",
       "/images/29-cup-02.jpg",
       "/images/29-cup-03.jpg",
-      "/images/29-cup-04.jpg",
       "/images/29-cup-05.jpg",
       "/images/29-cup-06.jpg",
       "/images/29-cup-07.jpg",
@@ -583,13 +588,14 @@ export const works: CeramicWork[] = [
     firing: "Cone 10",
     dimensions: "4 x 4 x 3",
     status: "not-available",
+    glaze: "Porcelain White",
     tone: "white",
     images: [
       "/images/30-cup-01.jpg",
       "/images/30-cup-02.jpg",
       "/images/30-cup-03.jpg",
-      "/images/30-cup-04.jpg",
       "/images/30-cup-05.jpg",
+      "/images/30-cup-04.jpg",
       "/images/30-cup-06.jpg",
     ],
   },
