@@ -63,7 +63,6 @@ export const works: CeramicWork[] = [
     firing: "Cone 10",
     dimensions: "5 x 5 x 3",
     tone: "white",
-    status: "not-available",
     glaze: "Clear",
     images: [
       "/images/3-cup-01.jpg",
@@ -81,6 +80,7 @@ export const works: CeramicWork[] = [
     clay: "Soldate 60",
     firing: "Cone 10",
     dimensions: "5 x 5 x 3",
+    status: "reserved",
     tone: "white",
     images: [
       "/images/4-bowl-01.jpg",
@@ -141,6 +141,7 @@ export const works: CeramicWork[] = [
     clay: "Soldate 60",
     firing: "Cone 10",
     dimensions: "4 x 5 x 2",
+    status: "not-available",
     tone: "warm",
     images: [
       "/images/9-cup-01.jpg",
@@ -280,6 +281,7 @@ export const works: CeramicWork[] = [
     clay: "Soldate 60 + Recycled clay",
     firing: "Cone 10",
     dimensions: "3 x 3 x 3",
+    status: "not-available",
     tone: "ash",
     glaze: "Clear",
     images: [
@@ -339,7 +341,7 @@ export const works: CeramicWork[] = [
     clay: "Granite",
     firing: "Cone 10",
     dimensions: "4 x 4 x 3",
-    status: "reserved",
+    status: "not-available",
     tone: "celadon",
     images: [
       "/images/24-cup-01.jpg",
@@ -360,8 +362,8 @@ export const works: CeramicWork[] = [
     clay: "Granite",
     firing: "Cone 10",
     dimensions: "4 x 4 x 3",
+    status: "not-available",
     tone: "dark",
-    status: "reserved",
     images: [
       "/images/25-cup-01.jpg",
       "/images/25-cup-02.jpg",
@@ -441,6 +443,7 @@ export const works: CeramicWork[] = [
     firing: "Cone 10",
     glaze: "Clear",
     dimensions: "5 x 5 x 3",
+    status: "not-available",
     tone: "celadon",
     images: [
       "/images/29-cup-01.jpg",
@@ -497,6 +500,7 @@ export const works: CeramicWork[] = [
     clay: "Soldate 60",
     firing: "Cone 10",
     dimensions: "3 x 3 x 3",
+    status: "not-available",
     tone: "celadon",
     images: [
       "/images/8-cup-01.jpg",
