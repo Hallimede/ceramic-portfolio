@@ -50,7 +50,8 @@ const statusLabels = {
         </aside>
 
         <div class="works-list">
-          {works.map((work) => {
+          {works.map((work, index) => {
+            const displayIndex = index + 1;
             const images = work.images ?? (work.image ? [work.image] : []);
             const coverIndex =
               typeof work.coverImageIndex === "number"
@@ -94,7 +95,7 @@ const statusLabels = {
                   <div class="work-title-row">
                     <div>
                       <div class="work-kicker">
-                        <p class="work-index">{work.id.toString().padStart(2, "0")}</p>
+                        <p class="work-index">{displayIndex.toString().padStart(2, "0")}</p>
                         {work.status && (
                           <span
                             class={`work-status work-status-${work.status}`}
